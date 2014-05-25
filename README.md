@@ -17,3 +17,13 @@ Once there, go into the __build/__ directory and make a test building Monkey:
 ```Shell
 $ bitbake monkey
 ```
+
+## Adding Monkey to your system image
+
+Edit your __build/conf/local.conf__ configuration file and make sure to set the variable IMAGE_INSTALL_append:
+
+```
+IMAGE_INSTALL_append = " monkey"
+```
+
+The next time your re-build your system image, Monkey will be packaged into it.
