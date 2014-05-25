@@ -11,13 +11,15 @@ SECTION = "net"
 DEPENDS = ""
 
 SRC_URI = "http://monkey-project.com/releases/1.5/monkey-${PV}.tar.gz"
-SRC_URI[md5sum] = "804b64cdda6c31f2f4d7417affbf5955"
-SRC_URI[sha256sum] = "7cb862e898fa1eefa39c19a4b401161f85eb79c5d7ed113559ae69dc9edb29f7"
+SRC_URI[md5sum] = "61cb1b216121dd8e9ff304aa8a5b587b"
+SRC_URI[sha256sum] = "77717912ff76fd3a294ec0b082a0d55ec2ceea18579311814bdff2e1c577c2b3"
 
 EXTRA_OECONF = " \
              --bindir=/usr/bin/ \
              --plugdir=/usr/lib/monkey/ \
              --logdir=/var/log/monkey/ \
+             --pidfile=/var/run/monkey.pid \
+             --default-user=www-data \
              --datadir=/var/www/monkey/ \
              --sysconfdir=/etc/monkey/ \
              --enable-plugins=* \
