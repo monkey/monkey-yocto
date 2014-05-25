@@ -11,8 +11,8 @@ SECTION = "net"
 DEPENDS = ""
 
 SRC_URI = "http://monkey-project.com/releases/1.5/monkey-${PV}.tar.gz"
-SRC_URI[md5sum] = "61cb1b216121dd8e9ff304aa8a5b587b"
-SRC_URI[sha256sum] = "77717912ff76fd3a294ec0b082a0d55ec2ceea18579311814bdff2e1c577c2b3"
+SRC_URI[md5sum] = "9123fc371334621fde1c060ab17adcd3"
+SRC_URI[sha256sum] = "f7a5e4839822750930a723f63a4edbf700e0fb8299a4b3637bd8bab5b1d098a7"
 
 EXTRA_OECONF = " \
              --bindir=/usr/bin/ \
