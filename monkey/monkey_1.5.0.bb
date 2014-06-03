@@ -13,10 +13,10 @@ SRC_URI[sha256sum] = "f7a5e4839822750930a723f63a4edbf700e0fb8299a4b3637bd8bab5b1
 
 EXTRA_OECONF = " \
              --plugdir=${libdir}/monkey/ \
-             --logdir=/var/log/monkey/ \
-             --pidfile=/var/run/monkey.pid \
+             --logdir=${localstatedir}/log/monkey/ \
+             --pidfile=${localstatedir}/run/monkey.pid \
              --default-user=www-data \
-             --datadir=/var/www/monkey/ \
+             --datadir= ${localstatedir}/www/monkey/ \
              --sysconfdir=${sysconfdir}/monkey/ \
              --enable-plugins=* \
              --disable-plugins=polarssl \
@@ -31,6 +31,6 @@ INITSCRIPT_PARAMS = "defaults 70"
 
 SYSTEMD_SERVICE_${PN} = "monkey.service"
 
-FILES_${PN} += "/www"
+FILES_${PN} += "${localstatedir}/www/monkey/"
 
 CONFFILES_${PN} = "${sysconfdir}/monkey/"
