@@ -35,8 +35,6 @@ SYSTEMD_SERVICE_${PN} = "monkey.service"
 
 FILES_${PN} += "${localstatedir}/www/monkey/"
 
-CONFFILES_${PN} = "${sysconfdir}/monkey/"
-
 do_install_append() {
 
     mkdir -p ${D}${sysconfdir}/init.d
